@@ -53,7 +53,7 @@ HTTP OPTIONS:
 
 SOCKET OPTIONS:
     --sockets, -s=NUM\t\t\tUse NUM sockets.
-\t\t\t\t Default: #{SOCKET}.
+\t\t\t\t Default: #{$SOCKET}.
 
 PROXY:
     --proxy,\t\t\t<hostname[:port]> Set proxy hostname and port. 
