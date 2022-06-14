@@ -48,7 +48,7 @@ TARGET SELECTION:
     <TARGETs>\t\t\tEnter URL, hostnames, IP addresses.
 
 HTTP OPTIONS:
-    --user-agent, -u=AGENT\tIdentify as AGENT instead of Slowlrois/#{Slowloris::VERSION}
+    --user-agent, -u=AGENT\tIdentify as AGENT instead of #{Slowloris::VERSION}
 
 
 SOCKET OPTIONS:
@@ -71,7 +71,7 @@ EXAMPLE USAGE:
     slowloris.rb www.example.com
     
     * Define Number of Sockets
-    slowloris.rb www.example.com -s=10 
+    slowloris.rb www.example.com -s 10 
 
 EOT
 end
