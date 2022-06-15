@@ -4,8 +4,6 @@ Slowloris is a Ruby port of the original Perl slowloris tool.
 # Author 
 Habib0x
 
-# 100 Day Porting Challenge 
-This is Day 1 of 100 Day Porting Challenge 
 
 # usage
 ruby slowloris.rb <url> <socket>
